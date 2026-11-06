@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Вопросы по новому сайту — Марина Андреева</title>
+<style>
+:root{--purple:#6C657E;--cream:#F7F2EF;--text:#303952;--line:#d9d3dd}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.55 'Open Sans',Arial,sans-serif;color:var(--text);background:var(--cream)}
+.wrap{max-width:720px;margin:0 auto;padding:28px 16px 64px}
+h1{font-size:26px;line-height:1.25;color:var(--purple);margin:0 0 8px}
+.lead{margin:0 0 24px}
+.card{background:#fff;border-radius:12px;padding:20px;margin-bottom:16px;border:1px solid var(--line)}
+.card h2{font-size:18px;margin:0 0 10px;color:var(--purple)}
+.quote{margin:8px 0 12px;padding:10px 14px;border-left:3px solid var(--purple);background:var(--cream);font-size:15px}
+.quote b{display:block;font-size:13px;color:var(--purple);margin-bottom:4px}
+label{display:block;margin:8px 0}
+.opt{display:flex;gap:8px;align-items:flex-start}
+.opt input{margin-top:5px}
+textarea,input[type=text]{width:100%;margin-top:6px;padding:11px 12px;border:1px solid var(--line);border-radius:8px;font:inherit;background:#fff}
+textarea{min-height:76px}
+.hp{position:absolute;left:-9999px;opacity:0}
+button{margin-top:8px;padding:14px 32px;border:2px solid var(--purple);border-radius:40px;background:var(--purple);color:#fff;font:inherit;cursor:pointer}
+button:disabled{opacity:.6}
+.msg{margin:16px 0 0;padding:12px 16px;border-radius:8px}
+.ok{background:#e6f4e6}.err{background:#fbe5e5}
+.msg[hidden]{display:none}
+small{color:#6b7280}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Вопросы по новому сайту</h1>
+<h2 style="font-size:20px;color:#6C657E;margin:0 0 8px">Вопросы Марине</h2>
+<p class="lead">Сайт переезжает с конструктора Т-Банка, который закрывается 01.12.2026. Марина, ответь, пожалуйста, на пять пунктов: можно по-короткому. Если что-то непонятно, так и напиши. Ниже три вопроса Виктору.</p>
+
+<form id="f" action="https://formspree.io/f/mrppdeqe" method="post">
+
+<div class="card">
+<h2>1. Формулировки про оплату и чек</h2>
+<p>Оплата будет по ссылке на оплату, которую ты присылаешь после записи. Согласна с текстами на сайте?</p>
+
+<div class="quote"><b>Как записаться, шаг 3</b>Я присылаю ссылку на оплату через сайт. Это безопасно: после оплаты сессии вы получаете чек, и она становится зарезервированной за вами.</div>
+<label class="opt"><input type="radio" name="q1a" value="согласна"> Согласна</label>
+<label class="opt"><input type="radio" name="q1a" value="нужна правка"> Нужна правка</label>
+
+<div class="quote"><b>Вопрос «Как оплатить?»</b>Оплата услуг происходит по ссылке на оплату, которую я присылаю после записи. Вы можете оплатить картой или через приложение вашего банка.</div>
+<label class="opt"><input type="radio" name="q1b" value="согласна"> Согласна</label>
+<label class="opt"><input type="radio" name="q1b" value="нужна правка"> Нужна правка</label>
+
+<div class="quote"><b>Вопрос «Вы даете чеки?»</b>Да. Я работаю как ИП, после оплаты вам на почту приходит чек.</div>
+<label class="opt"><input type="radio" name="q1c" value="согласна"> Согласна</label>
+<label class="opt"><input type="radio" name="q1c" value="нужна правка"> Нужна правка</label>
+
+<label>Если нужна правка, как написать:<textarea name="q1_fix"></textarea></label>
+</div>
+
+<div class="card">
+<h2>2. Почта для заявок</h2>
+<p>Заявки с формы на сайте будут приходить на <b>marinaandreeva.psy@yandex.ru</b>. Это верная почта, ты её читаешь?</p>
+<label class="opt"><input type="radio" name="q2" value="да"> Да, верная</label>
+<label class="opt"><input type="radio" name="q2" value="другая"> Нужна другая</label>
+<label>Другая почта (если нужна):<input type="text" name="q2_mail"></label>
+</div>
+
+<div class="card">
+<h2>3. Адрес кабинета и время работы</h2>
+<p>На сайте сейчас: <b>г. Екатеринбург, ул. 8 марта, 45а</b>; <b>ПН–ПТ с 10:00 до 19:00, СБ–ВС выходной</b>. Всё актуально?</p>
+<label class="opt"><input type="radio" name="q3" value="актуально"> Актуально</label>
+<label class="opt"><input type="radio" name="q3" value="изменилось"> Изменилось</label>
+<label>Как правильно:<textarea name="q3_fix"></textarea></label>
+</div>
+
+<div class="card">
+<h2>4. Счётчик посещений</h2>
+<p>Был ли на старом сайте счётчик посещений (например, Яндекс.Метрика) и нужен ли он на новом?</p>
+<label class="opt"><input type="radio" name="q4" value="был, нужен"> Был, нужен</label>
+<label class="opt"><input type="radio" name="q4" value="был, не нужен"> Был, не нужен</label>
+<label class="opt"><input type="radio" name="q4" value="не было"> Не было</label>
+<label class="opt"><input type="radio" name="q4" value="не знаю"> Не знаю</label>
+</div>
+
+<div class="card">
+<h2>5. Тексты документов</h2>
+<p>Оферта, политика обработки персональных данных, согласия и страница «Перед 1-й консультацией» переносятся дословно с сайта по состоянию на 03–04.11.2026. С тех пор что-то менялось?</p>
+<label class="opt"><input type="radio" name="q5" value="не менялось"> Не менялось</label>
+<label class="opt"><input type="radio" name="q5" value="менялось"> Менялось</label>
+<label>Что именно (и пришли новую версию Виктору):<textarea name="q5_fix"></textarea></label>
+</div>
+
+<h1 style="margin-top:32px">Вопросы Виктору</h1>
+<p class="lead">Для переезда на хостинг. Отвечает Виктор.</p>
+
+<div class="card">
+<h2>В1. Домен marinaandreeva.ru</h2>
+<p>Где зарегистрирован домен и до какого числа он оплачен? (Виктор думал, что в SpaceWeb.)</p>
+<label>Регистратор:<input type="text" name="v1_registrar"></label>
+<label>Оплачен до (дата):<input type="text" name="v1_until"></label>
+</div>
+
+<div class="card">
+<h2>В2. Аккаунт SpaceWeb</h2>
+<p>Есть ли аккаунт SpaceWeb, заведённый с почты БРО (на ноутбуке Lenovo)?</p>
+<label class="opt"><input type="radio" name="v2" value="есть"> Есть</label>
+<label class="opt"><input type="radio" name="v2" value="нет"> Нет</label>
+<label class="opt"><input type="radio" name="v2" value="не проверял"> Пока не проверял</label>
+</div>
+
+<div class="card">
+<h2>В3. Хостинг</h2>
+<p>Кандидат: SpaceWeb «Взлёт» (по sweb.ru на 03.11: 249 ₽/мес при оплате за год, 5 сайтов, 14 дней теста). Сначала сравнить со Sprinthost. Заказывает только Виктор после своего «да».</p>
+<label class="opt"><input type="radio" name="v3" value="Взлёт"> Берём «Взлёт»</label>
+<label class="opt"><input type="radio" name="v3" value="сравнить"> Сначала сравнить со Sprinthost</label>
+<label class="opt"><input type="radio" name="v3" value="другое"> Другое</label>
+<label>Комментарий:<textarea name="v3_note"></textarea></label>
+</div>
+
+<div class="card">
+<h2>Что-то ещё</h2>
+<label>Замечания и пожелания:<textarea name="other"></textarea></label>
+</div>
+
+<input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+<button type="submit">Отправить</button>
+<p class="msg ok" id="ok" hidden>Спасибо! Ответы отправлены.</p>
+<p class="msg err" id="err" hidden>Не получилось отправить. Попробуй ещё раз или перешли ответы Виктору в мессенджер.</p>
+</form>
+</div>
+<script>
+(function(){
+  var f=document.getElementById('f'),ok=document.getElementById('ok'),err=document.getElementById('err');
+  f.addEventListener('submit',function(e){
+    e.preventDefault();ok.hidden=err.hidden=true;
+    if(f.action.indexOf('FORM_ID')>-1){err.hidden=false;return}
+    var b=f.querySelector('button');b.disabled=true;
+    fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}})
+      .then(function(r){if(r.ok){ok.hidden=false;f.reset()}else{err.hidden=false}})
+      .catch(function(){err.hidden=false})
+      .then(function(){b.disabled=false});
+  });
+})();
+</script>
+</body>
+</html>
