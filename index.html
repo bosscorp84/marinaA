@@ -16,6 +16,8 @@ h1{font-size:26px;line-height:1.25;color:var(--purple);margin:0 0 8px}
 .card h2{font-size:18px;margin:0 0 10px;color:var(--purple)}
 .quote{margin:8px 0 12px;padding:10px 14px;border-left:3px solid var(--purple);background:var(--cream);font-size:15px}
 .quote b{display:block;font-size:13px;color:var(--purple);margin-bottom:4px}
+.note{margin:10px 0 0;padding:10px 14px;border-radius:8px;background:var(--cream);font-size:15px}
+.fromv{border:2px solid var(--purple)}
 label{display:block;margin:8px 0}
 .opt{display:flex;gap:8px;align-items:flex-start}
 .opt input{margin-top:5px}
@@ -28,18 +30,28 @@ button:disabled{opacity:.6}
 .ok{background:#e6f4e6}.err{background:#fbe5e5}
 .msg[hidden]{display:none}
 small{color:#6b7280}
+a{color:var(--purple)}
 </style>
 </head>
 <body>
 <div class="wrap">
 <h1>Вопросы по новому сайту</h1>
 <h2 style="font-size:20px;color:#6C657E;margin:0 0 8px">Вопросы Марине</h2>
-<p class="lead">Сайт переезжает с конструктора Т-Банка, который закрывается 01.12.2026. Марина, ответь, пожалуйста, на пять пунктов: можно по-короткому. Если что-то непонятно, так и напиши. Ниже три вопроса Виктору.</p>
+<p class="lead">Сайт переезжает с конструктора Т-Банка, который закрывается 01.12.2026. Марина, ответь, пожалуйста, на вопросы ниже: можно коротко, своими словами. Если что-то непонятно, так и напиши. Ниже есть вопросы Виктору.</p>
 
 <form id="f" action="https://formspree.io/f/mrppdeqe" method="post">
 
 <div class="card">
-<h2>1. Формулировки про оплату и чек</h2>
+<h2>1. Новый сайт похож на старый?</h2>
+<p>Открой на телефоне и на компьютере: <a href="https://viktorkanuta-a11y.github.io/marinaA/" target="_blank" rel="noopener">viktorkanuta-a11y.github.io/marinaA</a>. Это новый сайт для проверки.</p>
+<label class="opt"><input type="radio" name="m1" value="да, похож"> Да, похож</label>
+<label class="opt"><input type="radio" name="m1" value="нет"> Нет</label>
+<label>Если нет, что не так:<textarea name="m1_fix"></textarea></label>
+<p class="note">Скрин, если нужен, пришли Виктору. Через эту форму файлы не отправляются.</p>
+</div>
+
+<div class="card">
+<h2>2. Формулировки про оплату и чек</h2>
 <p>Оплата будет по ссылке на оплату, которую ты присылаешь после записи. Согласна с текстами на сайте?</p>
 
 <div class="quote"><b>Как записаться, шаг 3</b>Я присылаю ссылку на оплату через сайт. Это безопасно: после оплаты сессии вы получаете чек, и она становится зарезервированной за вами.</div>
@@ -58,23 +70,48 @@ small{color:#6b7280}
 </div>
 
 <div class="card">
-<h2>2. Почта для заявок</h2>
+<h2>3. Меню в Т-Бизнесе</h2>
+<p>Открой Т-Бизнес (приложение или сайт). Есть ли в меню слова «Эквайринг» и «Чеки»?</p>
+<label class="opt"><input type="checkbox" name="m3_acq" value="есть"> «Эквайринг» есть</label>
+<label class="opt"><input type="checkbox" name="m3_chk" value="есть"> «Чеки» есть</label>
+<label class="opt"><input type="checkbox" name="m3_none" value="не нашла"> Не нашла</label>
+<p class="note">Пришли Виктору скрин меню целиком. Через эту форму файлы не отправляются.</p>
+</div>
+
+<div class="card">
+<h2>4. Скидка за 8 сессий</h2>
+<p>На сайте: «Пакет со скидкой 15%», цена пакета из 8 онлайн-сессий 32 400 ₽. Это верно?</p>
+<label class="opt"><input type="radio" name="m4" value="верно"> Верно</label>
+<label class="opt"><input type="radio" name="m4" value="не верно"> Не верно</label>
+<label>Если не верно, какая скидка и цена:<input type="text" name="m4_fix"></label>
+</div>
+
+<div class="card">
+<h2>5. Почта</h2>
 <p>Заявки с формы на сайте будут приходить на <b>marinaandreeva.psy@yandex.ru</b>. Это верная почта, ты её читаешь?</p>
 <label class="opt"><input type="radio" name="q2" value="да"> Да, верная</label>
 <label class="opt"><input type="radio" name="q2" value="другая"> Нужна другая</label>
 <label>Другая почта (если нужна):<input type="text" name="q2_mail"></label>
+<p style="margin-top:14px">Есть ли у тебя почта с адресом на твоём сайте (например, имя@marinaandreeva.ru)?</p>
+<label class="opt"><input type="radio" name="m5b" value="есть"> Есть</label>
+<label class="opt"><input type="radio" name="m5b" value="нет"> Нет</label>
+<label class="opt"><input type="radio" name="m5b" value="не знаю"> Не знаю</label>
 </div>
 
 <div class="card">
-<h2>3. Адрес кабинета и время работы</h2>
+<h2>6. Адрес, время, цены, телефон и ссылки</h2>
 <p>На сайте сейчас: <b>г. Екатеринбург, ул. 8 марта, 45а</b>; <b>ПН–ПТ с 10:00 до 19:00, СБ–ВС выходной</b>. Всё актуально?</p>
 <label class="opt"><input type="radio" name="q3" value="актуально"> Актуально</label>
 <label class="opt"><input type="radio" name="q3" value="изменилось"> Изменилось</label>
 <label>Как правильно:<textarea name="q3_fix"></textarea></label>
+<p style="margin-top:14px">Цены на сайте (онлайн 4500 ₽, офлайн 5000 ₽, разовая 6000 ₽, пакет 32 400 ₽), ссылки на Телеграм и ВКонтакте верные?</p>
+<label class="opt"><input type="radio" name="m6" value="верно"> Верно</label>
+<label class="opt"><input type="radio" name="m6" value="есть ошибка"> Есть ошибка</label>
+<label>Что исправить:<textarea name="m6_fix"></textarea></label>
 </div>
 
 <div class="card">
-<h2>4. Счётчик посещений</h2>
+<h2>7. Счётчик посещений</h2>
 <p>Был ли на старом сайте счётчик посещений (например, Яндекс.Метрика) и нужен ли он на новом?</p>
 <label class="opt"><input type="radio" name="q4" value="был, нужен"> Был, нужен</label>
 <label class="opt"><input type="radio" name="q4" value="был, не нужен"> Был, не нужен</label>
@@ -83,11 +120,91 @@ small{color:#6b7280}
 </div>
 
 <div class="card">
-<h2>5. Тексты документов</h2>
-<p>Оферта, политика обработки персональных данных, согласия и страница «Перед 1-й консультацией» переносятся дословно с сайта по состоянию на 03–04.11.2026. С тех пор что-то менялось?</p>
-<label class="opt"><input type="radio" name="q5" value="не менялось"> Не менялось</label>
+<h2>8. Тексты документов</h2>
+<p>Оферта, политика обработки персональных данных, согласия и страница «Перед 1-й консультацией» перенесены дословно с сайта по состоянию на 03–04.11.2026. Просмотри эти страницы на новом сайте. Тексты верные и актуальные? С тех пор что-то менялось?</p>
+<label class="opt"><input type="radio" name="q5" value="не менялось"> Не менялось, всё верно</label>
 <label class="opt"><input type="radio" name="q5" value="менялось"> Менялось</label>
 <label>Что именно (и пришли новую версию Виктору):<textarea name="q5_fix"></textarea></label>
+</div>
+
+<h2 style="font-size:20px;color:#6C657E;margin:32px 0 8px">Вопросы про описание на сайте</h2>
+<p class="lead">Дальше вопросы про тексты на сайте. Мы хотим сделать их понятнее для человека, далёкого от психологии: чтобы он сразу понимал, что будет на сессии, и не боялся записаться. Твои ответы помогут исправить тексты.</p>
+
+<div class="card">
+<h2>9. Что такое «глубинная терапия»</h2>
+<p>На сайте много слов, которые человеку не из психологии непонятны: «глубинная терапия», «травмотерапия», «нервная система», «нейронные цепочки», «саморегуляция». Объясни за 2 предложения, как другу: что такое глубинная терапия и чем она отличается от обычного разговора с психологом?</p>
+<label><textarea name="m9"></textarea></label>
+</div>
+
+<div class="card">
+<h2>10. Что происходит на сессии</h2>
+<p>Опиши один час: что говорит клиент, что делаешь ты. Будет ли больно или страшно? Можно ли в любой момент остановиться?</p>
+<label><textarea name="m10"></textarea></label>
+</div>
+
+<div class="card">
+<h2>11. Кому не подходит</h2>
+<p>При каких состояниях человеку лучше сначала к врачу или психиатру, а не к тебе?</p>
+<label><textarea name="m11"></textarea></label>
+</div>
+
+<div class="card">
+<h2>12. Бесплатная встреча на 20 минут</h2>
+<p>Что на ней будет и что человеку подготовить? Это не продажа?</p>
+<label><textarea name="m12"></textarea></label>
+</div>
+
+<div class="card">
+<h2>13. Видеосвязь</h2>
+<p>В тексте сказано, что встречи идут по Teams. Нужно ли что-то скачивать? Что нужно человеку (камера, тихая комната)? Как к нему придёт ссылка?</p>
+<label><textarea name="m13"></textarea></label>
+</div>
+
+<div class="card">
+<h2>14. «Боль уходит за 4–6 сессий» и «с 4-й сессии»</h2>
+<p>Это обещание или обычный результат? Так и оставить, или написать мягче, например, «у многих клиентов»?</p>
+<label class="opt"><input type="radio" name="m14" value="оставить как есть"> Оставить как есть</label>
+<label class="opt"><input type="radio" name="m14" value="написать мягче"> Написать мягче</label>
+<label>Как написать:<textarea name="m14_fix"></textarea></label>
+</div>
+
+<div class="card">
+<h2>15. Что если не смогу прийти</h2>
+<p>В оферте сказано: если отказ менее чем за 24 часа до встречи, деньги не возвращаются. На главной странице этого нет. Добавить об этом в блок «Вопросы и ответы»?</p>
+<label class="opt"><input type="radio" name="m15" value="добавить"> Да, добавить</label>
+<label class="opt"><input type="radio" name="m15" value="не добавлять"> Нет, не нужно</label>
+<label>Как написать (если нужно):<textarea name="m15_fix"></textarea></label>
+</div>
+
+<div class="card">
+<h2>16. Мужчины</h2>
+<p>В «Обо мне» написано «одиноким женщинам и мужчинам», а примеры в тексте про женщин. Добавить пару слов для мужчин?</p>
+<label class="opt"><input type="radio" name="m16" value="добавить"> Да, добавить</label>
+<label class="opt"><input type="radio" name="m16" value="не нужно"> Нет, не нужно</label>
+<label>Что написать (если да):<textarea name="m16_fix"></textarea></label>
+</div>
+
+<div class="card">
+<h2>17. «Травмотерапевт» и «трансформационный коуч ICF»</h2>
+<p>Что это значит простыми словами? Одной строкой в блок «Обо мне».</p>
+<label><textarea name="m17"></textarea></label>
+</div>
+
+<div class="card">
+<h2>18. Что-то ещё</h2>
+<label>Замечания и пожелания:<textarea name="other_m"></textarea></label>
+</div>
+
+<div class="card fromv">
+<h2>19. Вопрос от Виктора: что такое «работаем с телом»</h2>
+<div class="quote"><b>Виктор пишет</b>Я мужчина, и раньше мне было непонятно: психолог-травматерапевт «работает с телом» — что это? Меня будут щипать, делать массаж, обнимать? Нужно объяснение простыми словами, что такое «работаем с телом».</div>
+<p>Ответь Виктору и будущим клиентам:</p>
+<label class="opt"><input type="radio" name="m19a" value="касаюсь"> Я касаюсь клиента</label>
+<label class="opt"><input type="radio" name="m19a" value="не касаюсь"> Я не касаюсь клиента</label>
+<label class="opt"><input type="radio" name="m19a" value="по-разному"> По-разному (напишу ниже)</label>
+<label>Что происходит на самом деле: сидит человек или лежит, что я делаю, как это на видеосвязи:<textarea name="m19b"></textarea></label>
+<label>Что ты скажешь тому, кто боится, что его будут трогать или обнимать:<textarea name="m19c"></textarea></label>
+<p class="note">Ответы на вопросы 9, 10, 12, 13 и 19 пойдут в короткий блок «Что будет на сессии» на сайте. Ты его прочитаешь и одобришь до публикации.</p>
 </div>
 
 <h1 style="margin-top:32px">Вопросы Виктору</h1>
@@ -95,22 +212,23 @@ small{color:#6b7280}
 
 <div class="card">
 <h2>В1. Домен marinaandreeva.ru</h2>
-<p>Где зарегистрирован домен и до какого числа он оплачен? (Виктор думал, что в SpaceWeb.)</p>
-<label>Регистратор:<input type="text" name="v1_registrar"></label>
+<p>Домен куплен Мариной в SpaceWeb (слова Виктора 09.11). До какого числа он оплачен? Как будем соединять домен с хостингом, когда дойдём до этого шага?</p>
 <label>Оплачен до (дата):<input type="text" name="v1_until"></label>
+<label class="opt"><input type="radio" name="v1_access" value="Марина даст вход"> Марина даст вход в свой кабинет SpaceWeb</label>
+<label class="opt"><input type="radio" name="v1_access" value="Марина сделает сама"> Марина сделает сама по инструкции</label>
+<label class="opt"><input type="radio" name="v1_access" value="не говорили"> Ещё не говорили</label>
 </div>
 
 <div class="card">
 <h2>В2. Аккаунт SpaceWeb</h2>
-<p>Есть ли аккаунт SpaceWeb, заведённый с почты БРО (на ноутбуке Lenovo)?</p>
-<label class="opt"><input type="radio" name="v2" value="есть"> Есть</label>
-<label class="opt"><input type="radio" name="v2" value="нет"> Нет</label>
-<label class="opt"><input type="radio" name="v2" value="не проверял"> Пока не проверял</label>
+<p>На Lenovo аккаунта нет. Новый аккаунт открывается на Dell из профиля «капита». Пароль сюда не писать.</p>
+<label class="opt"><input type="radio" name="v2" value="заведён"> Заведён</label>
+<label class="opt"><input type="radio" name="v2" value="заведу"> Ещё не заведён</label>
 </div>
 
 <div class="card">
 <h2>В3. Хостинг</h2>
-<p>Кандидат: SpaceWeb «Взлёт» (по sweb.ru на 03.11: 249 ₽/мес при оплате за год, 5 сайтов, 14 дней теста). Сначала сравнить со Sprinthost. Заказывает только Виктор после своего «да».</p>
+<p>Кандидат: SpaceWeb «Взлёт» (по sweb.ru на 03.11: 249 ₽/мес при оплате за год, 5 сайтов, 14 дней теста). Цену смотрим на странице заказа в день заказа. Заказывает только Виктор после своего «да».</p>
 <label class="opt"><input type="radio" name="v3" value="Взлёт"> Берём «Взлёт»</label>
 <label class="opt"><input type="radio" name="v3" value="сравнить"> Сначала сравнить со Sprinthost</label>
 <label class="opt"><input type="radio" name="v3" value="другое"> Другое</label>
